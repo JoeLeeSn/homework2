@@ -1,0 +1,88 @@
+2024-04-24 21:01:06.347 | DEBUG    | __main__:translation:12 - [翻译任务]
+源文件: C:\Users\67295\AppData\Local\Temp\gradio\2a51fb34d1b6923eaba3b50b934897dad87f6a4d\The_Old_Man_of_the_Sea_6-10_2.pdf
+源语言: English
+目标语言: Chinese
+翻译角色: 水浒
+2024-04-24 21:01:06.355 | INFO     | translator.pdf_translator:translate_pdf:20 - Translating C:\Users\67295\AppData\Local\Temp\gradio\2a51fb34d1b6923eaba3b50b934897dad87f6a4d\The_Old_Man_of_the_Sea_6-10_2.pdf from English to Chinese with 水浒 role.
+2024-04-24 21:01:06.538 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
+ The Old Man and the Sea Asiaing.com
+“I’m not very hungry.”
+“Come on and eat. You can’t fish and not eat.”
+“I have,” the old man said getting up and taking the newspaper and folding it. Then
+he started to fold the blanket.
+“Keep the blanket around you,” the boy said. “You’ll not fish without eating while I’m
+alive.”
+“Then live a long time and take care of yourself,” the old man said. “What are we
+eating?”
+“Black beans and rice, fried bananas, and some stew.”
+[19] The boy had brought them in a two-decker metal container from the Terrace.
+The two sets of knives and forks and spoons were in his pocket with a paper napkin
+wrapped around each set.
+“Who gave this to you?”
+“Martin. The owner.”
+“I must thank him.”
+“I thanked him already,” the boy said. “You don’t need to thank him.”
+“I’ll give him the belly meat of a big fish,” the old man said. “Has he done this for us
+more than once?”
+“I think so.”
+“I must give him something more than the belly meat then. He is very thoughtful for
+us.”
+“He sent two beers.”
+“I like the beer in cans best.”
+“I know. But this is in bottles, Hatuey beer, and I take back the bottles.”
+“That’s very kind of you,” the old man said. “Should we eat?”
+“I’ve been asking you to,” the boy told him gently. “I have not wished to open the
+container until you were ready.”
+[20] “I’m ready now,” the old man said. “I only needed time to wash.”
+Where did you wash? the boy thought. The village water supply was two streets
+down the road. I must have water here for him, the boy thought, and soap and a good
+towel. Why am I so thoughtless? I must get him another shirt and a jacket for the winter
+and some sort of shoes and another blanket.
+- 6 -
+2024-04-24 21:08:05.462 | DEBUG    | translator.writer:save_translated_book:18 - markdown
+2024-04-24 21:08:05.465 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\67295\AppData\Local\Temp\gradio\2a51fb34d1b6923eaba3b50b934897dad87f6a4d\The_Old_Man_of_the_Sea_6-10_2_translated.md
+2024-04-24 21:08:05.472 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\67295\AppData\Local\Temp\gradio\2a51fb34d1b6923eaba3b50b934897dad87f6a4d\The_Old_Man_of_the_Sea_6-10_2_translated.md
+2024-04-24 21:08:05.497 | DEBUG    | __main__:translation:12 - [翻译任务]
+源文件: C:\Users\67295\AppData\Local\Temp\gradio\2a51fb34d1b6923eaba3b50b934897dad87f6a4d\The_Old_Man_of_the_Sea_6-10_2.pdf
+源语言: English
+目标语言: Chinese
+翻译角色: 水浒
+2024-04-24 21:08:05.512 | INFO     | translator.pdf_translator:translate_pdf:20 - Translating C:\Users\67295\AppData\Local\Temp\gradio\2a51fb34d1b6923eaba3b50b934897dad87f6a4d\The_Old_Man_of_the_Sea_6-10_2.pdf from English to Chinese with 水浒 role.
+2024-04-24 21:08:05.578 | DEBUG    | translator.pdf_parser:parse_pdf:46 - [raw_text]
+ The Old Man and the Sea Asiaing.com
+“I’m not very hungry.”
+“Come on and eat. You can’t fish and not eat.”
+“I have,” the old man said getting up and taking the newspaper and folding it. Then
+he started to fold the blanket.
+“Keep the blanket around you,” the boy said. “You’ll not fish without eating while I’m
+alive.”
+“Then live a long time and take care of yourself,” the old man said. “What are we
+eating?”
+“Black beans and rice, fried bananas, and some stew.”
+[19] The boy had brought them in a two-decker metal container from the Terrace.
+The two sets of knives and forks and spoons were in his pocket with a paper napkin
+wrapped around each set.
+“Who gave this to you?”
+“Martin. The owner.”
+“I must thank him.”
+“I thanked him already,” the boy said. “You don’t need to thank him.”
+“I’ll give him the belly meat of a big fish,” the old man said. “Has he done this for us
+more than once?”
+“I think so.”
+“I must give him something more than the belly meat then. He is very thoughtful for
+us.”
+“He sent two beers.”
+“I like the beer in cans best.”
+“I know. But this is in bottles, Hatuey beer, and I take back the bottles.”
+“That’s very kind of you,” the old man said. “Should we eat?”
+“I’ve been asking you to,” the boy told him gently. “I have not wished to open the
+container until you were ready.”
+[20] “I’m ready now,” the old man said. “I only needed time to wash.”
+Where did you wash? the boy thought. The village water supply was two streets
+down the road. I must have water here for him, the boy thought, and soap and a good
+towel. Why am I so thoughtless? I must get him another shirt and a jacket for the winter
+and some sort of shoes and another blanket.
+- 6 -
+2024-04-24 21:08:20.305 | DEBUG    | translator.writer:save_translated_book:18 - markdown
+2024-04-24 21:08:20.307 | INFO     | translator.writer:_save_translated_book_markdown:90 - 开始导出: C:\Users\67295\AppData\Local\Temp\gradio\2a51fb34d1b6923eaba3b50b934897dad87f6a4d\The_Old_Man_of_the_Sea_6-10_2_translated.md
+2024-04-24 21:08:20.307 | INFO     | translator.writer:save_translated_book:28 - 翻译完成，文件保存至: C:\Users\67295\AppData\Local\Temp\gradio\2a51fb34d1b6923eaba3b50b934897dad87f6a4d\The_Old_Man_of_the_Sea_6-10_2_translated.md
