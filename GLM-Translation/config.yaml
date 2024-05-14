@@ -1,6 +1,6 @@
 OpenAIModel:
   model: "gpt-3.5-turbo"
-  api_key: "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"
+  api_key: ""
   model_type: "OpenAIModel"
 
 GLMModel:
