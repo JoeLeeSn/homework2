@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>显示Flask应用程序返回的数据</title>
+</head>
+<body>
+    <h1>Flask应用程序返回的数据：</h1>
+    <div id="data"></div>
+
+    <script>
+        // 发起 AJAX 请求
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                // 当请求成功时，将返回的数据插入到页面中
+                document.getElementById("data").innerHTML = this.responseText;
+            }
+        };
+        xhr.open("GET", "/data", true);
+        xhr.send();
+    </script>
+</body>
+</html>

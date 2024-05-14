@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcribe and Summarize</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
+            margin-top: 50px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        #fileContainer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        label:hover {
+            background-color: #45a049;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #loading {
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+
+        #result {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #result p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0 0 15px;
+        }
+
+        .letter {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>音频中英文翻译</h1>
+    <div id="fileContainer">
+        <label for="audioFile">选择文件</label>
+        <input type="file" id="audioFile" name="audioFile" required onchange="displayFilePath()">
+        <button onclick="processAudio()">提交</button>
+    </div>
+    <div id="loading">Loading...</div>
+    <div id="result"></div>
+
+    <script>
+        
+        var conversationId = '';
+
+        function displayFilePath() {
+            var fileInput = document.getElementById("audioFile");
+            var filePathDisplay = document.createElement("p");
+            filePathDisplay.textContent = "选择的文件：" + fileInput.files[0].name;
+            document.getElementById("fileContainer").appendChild(filePathDisplay);
+        }
+
+        function processAudio() {
+            var fileInput = document.getElementById("audioFile");
+            var file = fileInput.files[0];
+            var formData = new FormData();
+            formData.append("file_path", file);
+            formData.append("prompt", '整理内容');
+
+            document.getElementById("loading").style.display = "block";
+
+            fetch('/process_audio', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                conversationId = data.conversationId;
+                showResult(data.original_text, '音频内容: ');
+                processSummary(data.original_text);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById("loading").style.display = "none";
+            });
+        }
+
+           function processSummary(original_text) {
+            var formData = new FormData();
+            formData.append("original_text", original_text);
+            formData.append("prompt", '翻译成英文');
+
+            fetch('/process_summary', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                showResult(data.summary_text, '翻译内容: ');
+                document.getElementById("loading").style.display = "none";
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById("loading").style.display = "none";
+            });
+        }
+
+
+        function showResult(text, prefix) {
+            var resultDiv = document.getElementById("result");
+            var p = document.createElement("p");
+            p.textContent = prefix;
+            resultDiv.appendChild(p);
+            var interval = setInterval(function() {
+                if (text.length > 0) {
+                    var span = document.createElement("span");
+                    span.textContent = text.charAt(0);
+                    span.classList.add("letter");
+                    p.appendChild(span);
+                    text = text.slice(1);
+                } else {
+                    clearInterval(interval);
+                }
+            }, 50);
+        }
+    </script>
+</body>
+</html>
