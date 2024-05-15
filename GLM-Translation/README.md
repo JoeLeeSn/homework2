@@ -69,7 +69,7 @@ python app.py
 ### WEB DEMO
 
 打开  http://127.0.0.1:5000/static/index.html 选择音频文件并上传
-![[Pasted image 20240513005252.png]]
+![alt text](20240513005252-1.png)
 
 
 
